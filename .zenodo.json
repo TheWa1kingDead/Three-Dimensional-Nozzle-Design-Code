@@ -1,0 +1,55 @@
+{
+  "upload_type": "software",
+  "title": "Three-Dimensional Nozzle Design Code: corrected transonic throat solution and standalone Windows builds (modified version of NASA LEW-20180)",
+  "creators": [
+    {
+      "name": "Reddy, MRK",
+      "orcid": "0009-0006-8420-6672"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Karthick, S.K.",
+      "type": "Supervisor",
+      "affiliation": "Department of Mechanical and Aerospace Engineering, Indian Institute of Technology Hyderabad, India"
+    },
+    {
+      "name": "Rice, Tharen",
+      "type": "Other",
+      "affiliation": "The Johns Hopkins University Applied Physics Laboratory"
+    }
+  ],
+  "description": "<p>A maintained edition of NASA's Three-Dimensional Nozzle Design Code (NASA software designation LEW-20180), originally developed by T. Rice at JHU/APL. It contains three MFC applications for supersonic nozzle design: a 2D/axisymmetric method-of-characteristics grid generator (MOC_Grid_BDE), a streamline tracing tool (STT2001), and a 3D method-of-characteristics flowfield solver (3D_MOC).</p><p>This edition corrects the transonic throat (initial data line) solutions of Hall (1962) and Kliegel and Levine (1969) used in MOC_Grid_BDE, fixes an iteration-guard bug, and provides Visual Studio 2022+ projects that build standalone Windows executables.</p><p>Prepared by MRK Reddy under the guidance of Prof. S.K. Karthick, Department of Mechanical and Aerospace Engineering, IIT Hyderabad, India.</p>",
+  "license": "nasa-1.3",
+  "keywords": [
+    "method of characteristics",
+    "supersonic nozzle design",
+    "rocket nozzle",
+    "streamline tracing",
+    "transonic throat flow",
+    "compressible flow",
+    "Rao nozzle"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/nasa/Three-Dimensional-Nozzle-Design-Code",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.1093/qjmam/15.4.487",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.2514/3.5355",
+      "relation": "references",
+      "resource_type": "publication-article"
+    }
+  ],
+  "references": [
+    "Rice, T. (2003). 2D and 3D Method of Characteristic Tools for Complex Nozzle Development. JHU/APL Report RTDC-TPS-481. https://ntrs.nasa.gov/citations/20030067852",
+    "Hall, I. M. (1962). Transonic flow in two-dimensional and axially-symmetric nozzles. Quarterly Journal of Mechanics and Applied Mathematics, 15(4). https://doi.org/10.1093/qjmam/15.4.487",
+    "Kliegel, J. R., and Levine, J. N. (1969). Transonic flow in small throat radius of curvature nozzles. AIAA Journal, 7(7). https://doi.org/10.2514/3.5355"
+  ]
+}

@@ -152,6 +152,12 @@ NASA requests that users of this software register at <https://github.com/nasa/T
 
 Provided "AS IS" without warranty of any kind (NOSA §4). Results from these tools should be independently verified before use in hardware design. Export of technical data may be subject to U.S. export control regulations (NOSA §3J).
 
+## Acknowledgements
+
+This edition was prepared by MRK Reddy under the guidance of **Prof. S.K. Karthick**, Department of Mechanical and Aerospace Engineering, Indian Institute of Technology Hyderabad, India.
+
+The original software was developed by Tharen Rice at the Johns Hopkins University Applied Physics Laboratory with funding from NASA Glenn Research Center. The 3D_MOC build fixes are by Bleialf.
+
 ## Contact
 
 Maintainer of this edition: **MRK Reddy** · ORCID [0009-0006-8420-6672](https://orcid.org/0009-0006-8420-6672) · GitHub [@TheWa1kingDead](https://github.com/TheWa1kingDead)
