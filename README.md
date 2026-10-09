@@ -154,7 +154,7 @@ Provided "AS IS" without warranty of any kind (NOSA §4). Results from these too
 
 ## Acknowledgements
 
-This edition was prepared by MRK Reddy under the guidance of **Prof. S.K. Karthick**, Department of Mechanical and Aerospace Engineering, Indian Institute of Technology Hyderabad, India.
+This edition was prepared by **MRK Reddy** under the guidance of **Prof. S.K. Karthick**, Department of Mechanical and Aerospace Engineering, Indian Institute of Technology Hyderabad, India.
 
 The original software was developed by Tharen Rice at the Johns Hopkins University Applied Physics Laboratory with funding from NASA Glenn Research Center. The 3D_MOC build fixes are by Bleialf.
 
