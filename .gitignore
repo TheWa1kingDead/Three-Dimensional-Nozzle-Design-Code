@@ -1,5 +1,24 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/3D_MOC/.vs/3DCalc/v17
+# Visual Studio build output and per-user state
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+Win32/
+*.user
+*.aps
+*.APS
+*.ncb
+*.sdf
+*.suo
+*.VC.db
+*.ipch
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.tlog
+*.log
+*.tlb
+MOC_Grid.7D0F6384/
+$$.bat
