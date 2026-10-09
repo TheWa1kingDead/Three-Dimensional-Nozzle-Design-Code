@@ -1,5 +1,7 @@
 # Three-Dimensional Nozzle Design Code (corrected, standalone-build edition)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23269365.svg)](https://doi.org/10.5281/zenodo.23269365)
+
 A maintained edition of NASA's **Three-Dimensional Nozzle Design Code** (NASA software designation LEW-20180, original author **Tharen Rice**, JHU/APL). It fixes errors in the transonic throat solution and builds as standalone Windows executables that run on any 64-bit PC without Visual Studio installed.
 
 > **This is a modified version of NASA Original Software.** It is distributed under the
@@ -100,7 +102,7 @@ Debug builds depend on Visual Studio's debug DLLs and only run on the machine th
 
 ## How to cite
 
-If you use this software, please cite **both** this edition and the original NASA/JHU-APL report. GitHub's **"Cite this repository"** button (right sidebar) generates APA/BibTeX from [`CITATION.cff`](CITATION.cff).
+If you use this software, please cite **both** this edition and the original NASA/JHU-APL report. This edition is archived on Zenodo: cite the concept DOI [10.5281/zenodo.23269365](https://doi.org/10.5281/zenodo.23269365) for the software in general, or the version DOI [10.5281/zenodo.23269366](https://doi.org/10.5281/zenodo.23269366) to refer to v1.0.0 exactly. GitHub's **"Cite this repository"** button (right sidebar) generates APA/BibTeX from [`CITATION.cff`](CITATION.cff).
 
 ```bibtex
 @software{reddy_nozzle_design_code_2026,
@@ -110,7 +112,8 @@ If you use this software, please cite **both** this edition and the original NAS
              NASA LEW-20180)},
   year    = {2026},
   version = {1.0.0},
-  url     = {https://github.com/TheWa1kingDead/Three-Dimensional-Nozzle-Design-Code},
+  doi     = {10.5281/zenodo.23269365},
+  url     = {https://doi.org/10.5281/zenodo.23269365},
   note    = {Modified from NASA Original Software by T. Rice (JHU/APL);
              NASA Open Source Agreement v1.3}
 }

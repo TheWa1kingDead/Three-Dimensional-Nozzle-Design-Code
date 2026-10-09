@@ -9,6 +9,14 @@ title: >-
   and standalone Windows builds (modified version of NASA LEW-20180)
 version: 1.0.0
 date-released: "2026-10-10"
+doi: 10.5281/zenodo.23269365
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23269365
+    description: Concept DOI (all versions, resolves to the latest)
+  - type: doi
+    value: 10.5281/zenodo.23269366
+    description: Version DOI for v1.0.0
 authors:
   - family-names: Reddy
     given-names: MRK
