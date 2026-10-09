@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using the metadata below, and also
+  cite the original NASA/JHU-APL report by T. Rice (2003) listed under
+  references.
+type: software
+title: >-
+  Three-Dimensional Nozzle Design Code: corrected transonic throat solution
+  and standalone Windows builds (modified version of NASA LEW-20180)
+version: 1.0.0
+date-released: "2026-10-10"
+authors:
+  - family-names: Reddy
+    given-names: MRK
+    orcid: "https://orcid.org/0009-0006-8420-6672"
+repository-code: "https://github.com/TheWa1kingDead/Three-Dimensional-Nozzle-Design-Code"
+license: NASA-1.3
+abstract: >-
+  A maintained edition of NASA's Three-Dimensional Nozzle Design Code (NASA
+  software designation LEW-20180, originally developed by T. Rice at JHU/APL).
+  It contains three MFC applications for supersonic nozzle design: a 2D/axisymmetric
+  method-of-characteristics grid generator (MOC_Grid_BDE), a streamline tracing
+  tool (STT2001), and a 3D method-of-characteristics flowfield solver (3D_MOC).
+  This edition corrects the transonic throat (initial data line) solutions of
+  Hall (1962) and Kliegel & Levine (1969) used in MOC_Grid_BDE, fixes an
+  iteration-guard bug, and provides Visual Studio 2022+ projects that build
+  standalone Windows executables.
+keywords:
+  - method of characteristics
+  - supersonic nozzle design
+  - rocket nozzle
+  - streamline tracing
+  - transonic throat flow
+  - compressible flow
+  - Rao nozzle
+references:
+  - type: software
+    title: Three-Dimensional Nozzle Design Code
+    authors:
+      - family-names: Rice
+        given-names: Tharen
+    institution:
+      name: National Aeronautics and Space Administration
+    repository-code: "https://github.com/nasa/Three-Dimensional-Nozzle-Design-Code"
+    license: NASA-1.3
+    notes: NASA Government Agency Original Software Designation LEW-20180
+  - type: report
+    title: 2D and 3D Method of Characteristic Tools for Complex Nozzle Development
+    authors:
+      - family-names: Rice
+        given-names: Tharen
+    institution:
+      name: The Johns Hopkins University Applied Physics Laboratory
+    number: RTDC-TPS-481
+    year: 2003
+    url: "https://ntrs.nasa.gov/citations/20030067852"
+  - type: article
+    title: Transonic flow in two-dimensional and axially-symmetric nozzles
+    authors:
+      - family-names: Hall
+        given-names: I. M.
+    journal: Quarterly Journal of Mechanics and Applied Mathematics
+    volume: 15
+    issue: 4
+    start: 487
+    year: 1962
+    doi: 10.1093/qjmam/15.4.487
+  - type: article
+    title: Transonic flow in small throat radius of curvature nozzles
+    authors:
+      - family-names: Kliegel
+        given-names: J. R.
+      - family-names: Levine
+        given-names: J. N.
+    journal: AIAA Journal
+    volume: 7
+    issue: 7
+    year: 1969
+    doi: 10.2514/3.5355
