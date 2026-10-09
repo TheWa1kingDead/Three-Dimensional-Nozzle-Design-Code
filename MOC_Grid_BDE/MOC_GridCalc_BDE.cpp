@@ -505,7 +505,7 @@ int MOC_GridCalc::CalcContouredNozzle( int paramType, double *paramMatch,
 
 		dS = CalcLRCDE(lastKernelJ, iLast[lastKernelJ], pAmb, geom, nRRCPlus, nType,paramMatch[1],0);
 		
-		while (dS.dSi[2] == SEC_FAIL_LOW || dS.dSi[2] == SEC_FAIL_HIGH && i++ < 20)
+		while ((dS.dSi[2] == SEC_FAIL_LOW || dS.dSi[2] == SEC_FAIL_HIGH) && i++ < 20)
 		{
 			// This means that the last point along THETAB did not meet the 
 			//	requirements. 
@@ -2918,7 +2918,7 @@ dummyStruct MOC_GridCalc::CalcHallLine(double rUp, double x, double r, double g,
 	z = x*sqrt((g+1)/((1+type)*rUp));
 	u1 = 0.5*r*r - 0.25 + z;
 	v1 = 0.25*r*r*r - 0.25*r + r*z;
-	u2 = (2*g+9)/24*r*r*r*r - (4*g+15)/24*r*r + (10*g+57)/288 + z*(r*r - 5/8) - (2*g-3)/6*z*z;
+	u2 = (2*g+9)/24*r*r*r*r - (4*g+15)/24*r*r + (10*g+57)/288 + z*(r*r - 5.0/8.0) - (2*g-3)/6*z*z;
 	v2 = (g+3)/9*r*r*r*r*r - (20*g+63)/96*r*r*r + (28*g+93)/288*r + 
 		z*((2*g+9)/6*r*r*r - (4*g+15)/12*r) + r*z*z;
 	u3 = (556*g*g+1737*g+3069)/10368*r*r*r*r*r*r - (388*g*g+1161*g+1881)/2304*r*r*r*r +
@@ -2939,7 +2939,7 @@ dummyStruct MOC_GridCalc::CalcHallLine(double rUp, double x, double r, double g,
 
 	q = sqrt(u*u+v*v);
 
-	mach = q*sqrt((g+1)/2 - (g-1)/2*q*q);
+	mach = q*sqrt((g+1)/2.0 - (g-1)/2.0*q*q);
 	theta = atan(v/u);
 	if (fabs(theta) < 1e-6) theta = 0.0;
 	
@@ -3121,16 +3121,16 @@ int MOC_GridCalc::KLThroat(int i, int geom, double RS)
 		RSP = RS + 1;
 		u[1] = y*y/2 - 0.25 + z;
 		v[1] = y*y*y/4 - y/4 + y*z;
-		u[2] = (2*G + 9)*y*y*y*y/24 - (4*G + 15)*y*y/24 + (10*G + 57)/288 + z*(y*y - 5/8) - (2*G - 3)*z*z/6;
+		u[2] = (2*G + 9)*y*y*y*y/24 - (4*G + 15)*y*y/24 + (10*G + 57)/288 + z*(y*y - 5.0/8.0) - (2*G - 3)*z*z/6;
 		v[2] = (G + 3)*y*y*y*y*y/9 - (20*G + 63)*y*y*y/96 + (28*G + 93)*y/288 + 
 			z*((2*G + 9)*y*y*y/6 - (4*G + 15)*y/12) + y*z*z;
 		u[3] = (556*G*G + 1737*G + 3069)*y*y*y*y*y*y/10368 - (388*G*G + 1161*G + 1881)*y*y*y*y/2304 + 
 			(304*G*G + 831*G + 1242)*y*y/1728 - (2708*G*G + 7839*G + 14211)/82944 +
-			z*((52*G*G + 51*G + 327)*y*y*y*y/34 - (52*G*G + 75*G + 279)*y*y/192 + (92*G*G + 180*G + 639)/1152) + 
+			z*((52*G*G + 51*G + 327)*y*y*y*y/384 - (52*G*G + 75*G + 279)*y*y/192 + (92*G*G + 180*G + 639)/1152) + 
 			z*z*(-(7*G - 3)*y*y/8 + (13*G - 27)/48) + (4*G*G - 57*G + 27)*z*z*z/144;
 		v[3] = (6836*G*G + 23031*G + 30627)*y*y*y*y*y*y*y/82944 - (3380*G*G + 11391*G + 15291)*y*y*y*y*y/13824 +
 			(3424*G*G + 11271*G + 15228)*y*y*y/13824 - (7100*G*G + 22311*G + 30249)*y/82944 +
-			z*((556*G*G + 1737*G + 3069)*y*y*y*y*y/1728 * (388*G*G + 1161*G + 1181)*y*y/576 +
+			z*((556*G*G + 1737*G + 3069)*y*y*y*y*y/1728 - (388*G*G + 1161*G + 1881)*y*y*y/576 +
 			(304*G*G + 831*G + 1242)*y/864) + z*z*((52*G*G + 51*G + 327)*y*y*y/192 - (52*G*G + 75*G + 279)*y/192) -
 			z*z*z*(7*G - 3)*y/12;
 
@@ -3143,19 +3143,19 @@ int MOC_GridCalc::KLThroat(int i, int geom, double RS)
 		//	Calculate the z to be used in the velocity equations Eq 12
 			z = x[i][0]*sqrt(RS/(G+1));
 
-		u[1] = 0.5*y*y - 1/6 + z;
+		u[1] = 0.5*y*y - 1.0/6.0 + z;
 		v[1] = y*y*y/6 - y/6 + y*z;
-		u[2] = (y+6)*y*y*y*y/18 - (2*G+9)*y*y/18 + (G+30)/270 + z*(y*y-0.5) - (2*G-3)*z*z/6;
+		u[2] = (G+6)*y*y*y*y/18 - (2*G+9)*y*y/18 + (G+30)/270 + z*(y*y-0.5) - (2*G-3)*z*z/6;
 		v[2] = (22*G+75)*y*y*y*y*y/360 - (5*G+21)*y*y*y/54 + (34*G+195)*y/1080 + z/9*((2*G+12)*y*y*y - (2*G+9)*y) + y*z*z;
 		u[3] = (362*G*G+1449*G+3177)*y*y*y*y*y*y/12960 - (194*G*G + 837*G + 1665)*y*y*y*y/2592 + 
-			(854*G*G + 3687*G + 6759)*y*y/12960 - (782*G*G + 5523 + 2*G*2887)/272160 + 
+			(854*G*G + 3687*G + 6759)*y*y/12960 - (782*G*G + 5523*G + 22887)/272160 + 
 			z*((26*G*G + 27*G + 237)*y*y*y*y/288 - (26*G*G + 51*G + 189)*y*y/144 +
 			(134*G*G + 429*G + 1743)/4320) + z*z*(-5*G*y*y/4 + (7*G - 18)/36) + 
 			z*z*z*(2*G*G - 33*G + 9)/72;
 		v[3] = (6574*G*G + 26481*G + 40059)*y*y*y*y*y*y*y/181440 - (2254*G*G + 10113*G + 16479)*y*y*y*y*y/25920 + 
 			(5026*G*G + 25551*G + 46377)*y*y*y/77760 - (7570*G*G + 45927*G + 98757)*y/544320 + 
-			z*((362*G*G + 1449*G + 3177)*y*y*y*y*y/2160 * (194*G*G + 837*G + 1665)*y*y*y/648 + 
-			(854*G*G + 3687*G + 6759)*y/6480) + z*z*((26*G*G + 27*G + 237)*y*y*y/144 - (26*G*G + 51*G + 189)/144) + 
+			z*((362*G*G + 1449*G + 3177)*y*y*y*y*y/2160 - (194*G*G + 837*G + 1665)*y*y*y/648 + 
+			(854*G*G + 3687*G + 6759)*y/6480) + z*z*((26*G*G + 27*G + 237)*y*y*y/144 - (26*G*G + 51*G + 189)*y/144) + 
 			z*z*z*(-5*G*y/6);
 		
 		U = 1 + u[1]/RS + u[2]/RS/RS + u[3]/RS/RS/RS;
@@ -3165,7 +3165,7 @@ int MOC_GridCalc::KLThroat(int i, int geom, double RS)
 	theta[i][0] = atan2(V,U);
 	if (fabs(theta[i][0]) < 1e-5) theta[i][0] = 0.0;
 	Q = sqrt(U*U+V*V);
-	mach[i][0] = Q;
+	mach[i][0] = Q / sqrt((G + 1) / 2.0 - (G - 1) / 2.0 * Q * Q);
 	CalcIsentropicP_T_RHO(i,0,gamma[i][0],mach[i][0]);
 	
 	if (mach[i][0] < 1.0)
